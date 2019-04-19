@@ -10,7 +10,8 @@ app.get("/", (req, res) => {
 
 
 require('./controllers/authController')(app);
+require('./controllers/projectController')(app);
 
 app.listen(3000, () => {
-    console.log("iniciando o server na porta 3000");
+    console.log("Starting express on port 3000");
 });
