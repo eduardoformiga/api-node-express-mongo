@@ -10,9 +10,7 @@ const sendMail = require('../../modules/mailer');
 const router = express.Router();
 
 function generateToken(params = {}) {
-  return jwt.sign(params, authConfig.secret, {
-    expiresIn: Constants.DAY_IN_SECONDS,
-  });
+  return jwt.sign(params, authConfig.secret, { expiresIn: Constants.DAY_IN_SECONDS });
 }
 
 router.post('/register', async (req, res) => {
